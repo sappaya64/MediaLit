@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <style>
+    body {
+      background-color: #f8f9fa;
+      font-family: 'Share Tech Mono', monospace;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: auto;
+      padding: 20px;
+    }
+
+    .card {
+      margin: 20px 0;
+      padding: 20px;
+      background-color: #ffffff;
+      border-radius: 15px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+    }
+
+    .inner-text {
+      text-align: center;
+    }
+
+    .btn {
+      margin-top: 15px;
+      font-size: 16px;
+      padding: 10px 20px;
+      border-radius: 8px;
+      background-color: #007bff;
+      color: #fff;
+      transition: background-color 0.3s ease-in-out;
+      cursor: pointer;
+    }
+
+    .btn:hover {
+      background-color: #0056b3;
+    }
+    .center-link {
+    text-align: center;
+    margin-top: 20px; /* เพิ่มระยะห่างด้านบนเพื่อให้ดูสวยงาม */
+  }
+
+  .center-link a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #3498db; /* สีพื้นหลัง */
+    color: #ffffff; /* สีข้อความ */
+    text-decoration: none;
+    border-radius: 5px; /* เพิ่มขอบมนเหลี่ยม */
+    font-size: 18px;
+    font-weight: bold;
+    transition: background-color 0.3s ease; /* เพิ่มอนิเมชันเมื่อนำเมาส์ไปวัตถุ */
+  }
+
+  .center-link a:hover {
+    background-color: #2980b9; /* เปลี่ยนสีพื้นหลังเมื่อนำเมาส์ hover */
+  }
+  </style>
+</head>
+<body>
+<body>
+    <link href="https://fonts.googleapis.com/css?family=Share+Tech+Mono" rel="stylesheet">
+    <div class="container">
+    <div class="card storytile scene1" id="scene1"></div>
+    <div class="card storytile scene2" id="scene2"></div>
+    <div class="card storytile scene3" id="scene3"></div>
+    <div class="card storytile scene4" id="scene4"></div>
+    <div class="card storytile scene5" id="scene5"></div>
+    <div class="card storytile scene6" id="scene6"></div>
+    <div class="card storytile scene7" id="scene7"></div>
+    <div class="card storytile scene8" id="scene8"></div>
+    <div class="card storytile scene9" id="scene9"></div>
+    <div class="card storytile scene10" id="scene10"></div>
+    <div class="card storytile scene11" id="scene11"></div>
+    <div class="card storytile scene12" id="scene12"></div>
+    <div class="card storytile scene13" id="scene13"></div>
+    <div class="card storytile scene14" id="scene14"></div>
+    <div class="card storytile scene15" id="scene15"></div>
+    <div class="card storytile scene16" id="scene16"></div>
+    <div class="card storytile scene17" id="scene17"></div>
+    <div class="card storytile scene18" id="scene18"></div>
+    <div class="card storytile scene19" id="scene19"></div>
+    <div class="card storytile scene20" id="scene20"></div>
+    <div class="card storytile scene21" id="scene21"></div>
+    <div class="card storytile scene22" id="scene22"></div>
+    <div class="card storytile scene23" id="scene23"></div>
+    <div class="card storytile scene24" id="scene24"></div>
+    <div class="card storytile scene25" id="scene25"></div>
+    <div class="card storytile scene26" id="scene26"></div>
+    <div class="card storytile scene27" id="scene27"></div>
+    <div class="card storytile scene28" id="scene28"></div>
+    <div class="card storytile scene29" id="scene29"></div>
+    <div class="card storytile scene30" id="scene30"></div>
+    <div class="card storytile scene31" id="scene31"></div>
+    <div class="card storytile scene32" id="scene32"></div>
+    <div class="card storytile scene33" id="scene33"></div>
+    <div class="card storytile scene34" id="scene34"></div>
+    <div class="card storytile scene35" id="scene35"></div>
+    <div class="card storytile scene36" id="scene36"></div>
+    <div class="card storytile scene37" id="scene37"></div>
+    <div class="card storytile scene38" id="scene38"></div>
+    <div class="card storytile scene39" id="scene39"></div>
+    <div class="card storytile scene40" id="scene40"></div>
+    <div class="card storytile scene41" id="scene41"></div>
+    <div class="card storytile scene42" id="scene42"></div>
+    <div class="card storytile scene43" id="scene43"></div>
+    <div class="card storytile scene44" id="scene44"></div>
+    <div class="card storytile scene45" id="scene45"></div>
+    <div class="card storytile scene46" id="scene46"></div>
+    <div class="card storytile scene47" id="scene47"></div>
+    <div class="card storytile scene48" id="scene48"></div>
+    <div class="card storytile scene49" id="scene49"></div>
+    <div class="card storytile scene50" id="scene50"></div>
+    <div class="card storytile scene51" id="scene51"></div>
+    <div class="card storytile scene52" id="scene52"></div>
+    
+</div>
+<div class="center-link">
+  <a href="index.html">กลับหน้าหลัก</a>
+  <a href="game2.html">เล่นเกมอื่น</a>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+  <script>
+    //game engine functions:
+//if you wan to use it, please notify me at connerow1115@gmail.com. STRICTLY DO NOT PLAIGERIZE!
+var newTile = function(num,t1,t2,b1,b2,b3,s1,s2,s3){
+  $("#scene"+num).html('<div class = "innertile1"><div class = "inner-text"><h1>'+t1+'</h1><p>'+t2+'</p><a href = "#'+s1+'"><button class = "choice1-'+num+' btn btn-default">'+b1+'</button></a><a href = "#'+s2+'"><button class = "choice2-'+num+' btn btn-default">'+b2+'</button></a><a href = "#'+s3+'"><button class = "choice3-'+num+' btn btn-default">'+b3+'</button></a></div></div>');
+  $("."+s1).hide();
+  $("."+s2).hide();
+  $("."+s3).hide();
+  
+  $(".choice1-"+num).on("click",function(){
+    $("."+s1).show();
+    $("#scene"+num).hide();
+  });
+  $(".choice2-"+num).on("click",function(){
+    $("."+s2).show();
+        $("#scene"+num).hide();
+
+  });
+  $(".choice3-"+num).on("click",function(){
+    $("."+s3).show();
+        $("#scene"+num).hide();
+
+  });
+  
+};
+var fail = function(num,t1,t2,b1,b2,b3,s1,s2,s3){
+  $("#scene"+num).html('<div class = "innertile1"><div class = "inner-text"><h1>'+t1+'</h1><p>'+t2+'</p><a href = "#'+s1+'"><button class = "choice1-'+num+' btn btn-default">'+b1+'</button></a><a href = "#'+s2+'"><button class = "choice2-'+num+' btn btn-default">'+b2+'</button></a><a href = "#'+s3+'"><button class = "choice3-'+num+' btn btn-default">'+b3+'</button></a></div></div>');
+  $(".choice1-"+num).on("click",function(){
+    $("."+s1).show();
+    $("#scene"+num).hide();
+  });
+  $(".choice2-"+num).on("click",function(){
+    $("."+s2).show();
+        $("#scene"+num).hide();
+
+  });
+  $(".choice3-"+num).on("click",function(){
+    $("."+s3).show();
+        $("#scene"+num).hide();
+
+  });
+};
+
+//correct answers. I have very messy code, so don't bother cheating. >:D
+{
+  newTile('1','STORY GAMES','<img src="img/me.jpg" alt="รูปภาพ"><br><strong>การเล่นเกม:</strong><br>1. เลือกคำตอบที่ใช่เท่านั้น<br>2. ห้ามเปิดดูข้อมูลอื่นๆ คิดเองเท่านั้น<br>3. อ่านให้ชัวเลือกที่ใช่<br><br>คุณคือนักศึกษา ที่กำลังจะทำโปรเจคแต่คุณไม่อยากทำงาน จึงอยากหาตัวช่วย คุณเลยค้นหาในเว็บไซต์ที่คุณไม่รู้จัก ซึ่งเว็บไซต์มีเเต่ข้อดีมากมายไม่มีข้อเสียเลยจนคุณอยากจะใช้มัน เเต่พอคุณจะใช้งาน เว็บไซต์นั้นกลับอยากให้คุณกรอกข้อมูลส่วนตัว เเละต้องกรอกข้อมูลการเงินคุณด้วย คุณจะเลือกแบบไหน.','ฉันว่ามันเเปลกๆ','ตกลงทันที!','ฉันขอคิดดูก่อน..',"scene2","scene3","scene4");
+newTile('2','คุณเลือกได้ดี!','คุณสงสัยว่าเว็บไซต์ที่คุณจะใช้มันดูเเปลก ว่าทำไมเว็บไซต์ถึงต้องให้เรากรอกข้อมูลส่วนตัว เเละข้อมูลการเงินด้วย เพียงเเค่จะใช้งานเล็กน้อย คุณลังเลเเละไม่มั่นใจว่าจะทำเเบบไหน','มันคงไม่มีอะไร เว็บอื่นๆก็ทำเเบบนี้','ค้นหาวิธีดูเว็บปลอม','กดปิดออกจากเว็บไซ์ ไม่รับรู้อะไร','scene5','scene6','scene7');
+newTile('6','คุณเก่งมาก','คุณลองค้นหาวิธีต่างๆในการเช็คเว็ปไซต์คุณได้พบว่าต้องกรอกชื่อที่อยู่เลขบัญชีธนาคารคุณเลย...','ก็แค่ถามเฉยๆ','เป็นคำถามทั่วไปที่ทุกเว็ปไซต์อื่นๆก็ทำ','เว็ปไซต์นั้นกำลังหลอกเอาขอมูลของคุณ','scene5','scene8','scene9');
+newTile('9','ใช่แล้วมันคือการหลอกเอาข้อมูล','เมื่อคุณรู้แบบนั้นแล้วคุณจึงได้กลับไปเว็ปไซต์แรกที่คุณหาข้อมูลจากนั้น...','ใส่ข้อมูลต่างๆจนครบ','นำเว็ปไซต์นี้ไปแจ้งว่าเป็นเว็ปไซต์ปลอม','เข้าไปอ่านเหมือนเดิม','scene10','scene11','scene12');
+newTile('11','คุณทำถูกต้องแล้ว','จากนั้นคุณจึงแชร์เว็ปนี้ไปให้เพื่อนของคุณแล้วบอกว่า...','อย่าเข้ากรอกอะไรในเว็ปนี้เด็ดขาด','เว็ปไซต์นี้อันตรายก่อนจะกรอกข้อมูลอะไรเช็คให้ดีๆ','ลองกดเข้าไปดูดิได้เงินฟรี','scene13','scene13','scene14');
+newTile('13','ดีมาก','คุณนี่เป็นคนดีจริงๆ จากนั้นคุณจึงไปหาข่าวประจำวันอ่านเมื่อคุณอ่านข่าวเสร็จแล้วคุณสังเกตว่าที่มาของข่าวไม่มี สำนักข่าวชื่อแปลกๆคุณจึง....','แชร์ต่อทันที','หาแหล่งที่มาของข่าวนี้','นำไปพูดคุยกับเพื่อนๆโดยไม่ตรวจสอบ','scene15','scene16','scene17');
+newTile('16','คุณกำลังตรวจสอบแหล่งที่มาของข่าว','คุณจึงได้พบว่าข่าวที่คุณกำลังอ่านนั้นเป็นข่าวปลอม ซึ่งมันเป็นอะไรที่แย่มากๆแล้วคุณได้สังเกตเห็นลิ้งค์แปลกคุณจึง...','กดเข้าไปเลย','กดโดยไม่คิดอะไร','ไม่กดเด็ดขาด','scene18','scene19','scene20');
+newTile('20','อันตรายจริงๆแค่จะอ่านข่าวเองนะ','อยู่ๆก็มีข้อความเด้งเข้ามาในโทรศัพ์"มีความผิดพลาดในบัญชีธนาคารของคุณ! กรุณากรอกข้อมูลใหม่เพื่อปรับปรุงข้อมูลของคุณ คุณจึง....."','เข้าไปกรอกข้อมูล','เข้าไปดูโดยที่ไม่กรอกอะไรทั้งสิ้น','กรอกตามที่ข้อความบอก','scene21','scene22','scene23');
+newTile('22','แย่จริงๆทำไมมีแต่การหลอกลวง','จากนั้นคุณได้เห็นข้อความที่เพื่อนของคุณส่งมา"ขอยืมเงินหน่อยสีสัก500บาทเดี๋ยวพรุ่งนี้คืน"แต่คุณสังเกตเห็นอะไรแปลกๆคือเพื่อนที่ส่งข้อความมาไม่ได้ขึ้นว่าเป็นเพื่อนกันอยู่แล้วแถมยังเป็นโปรไฟล์เก่าของเพื่อนคุณจึง...','โอนเงินให้ทันที','ตรวจสอบว่านั้นใช่บัญชีของเพื่อนจริงๆหรือไม่','เพื่อนกำลังต้องการความช่วยเหลือ','scene24','scene25','scene26');
+newTile('25','เก่งมากๆ','เก่งมากที่คุณสามารถแยกออกได้ด้วย คุณควรจะทักไปบอกเพื่อนหรือไม่ว่าโดนเอาบัญชีไปหลอกเอาเงินคนอื่น?','บอกแน่นอน','ไม่อะขี้เกียจ','ไม่บอก','scene27','scene28','scene29');
+newTile('27','Good choice!','คุณเป็นคนที่รักเพื่อนดีนี่ จากนั้นคุณจึงกดเข้าไปที่บัญชีปลอมของเพื่อนแล้ว....','กดรีพอร์ต','ไปดูเฉยๆ','โปรไฟล์ตกจัง','scene30','scene29','scene29');
+newTile('30','ยอดเยี่ยม','คุณเริ่มคิดแล้วว่าทำไมโลกออนไลน์ถึงอัตรายขนาดนี้คุณจึงเริ่ม','ไม่เข้าใจอะมึน','เข้าใจวิธีการหลอกลวงต่างๆ','เข้าใจวิธีแยกแยะข่าวปลอม','scene31','scene32','scene32');
+newTile('32','ELEGANCE!!','ต่อไปคุณจะวิเคราห์ข่าวที่ได้รับหรือที่ดูหรือไม่','ไม่อะ','วิเคราะห์','เรื่องของฉันสิ','scene33','scene34','scene33');
+newTile('34','ELEGANCE!!!','คุณจะระวังไม่ให้ขอมูลส่วนตัวไปตกเป็นของคนอื่นใช่หรือไม่?','ใช่','ไม่อะ','ไม่ทำแล้วจะทำไม','scene35','scene36','scene37');
+newTile('35','คุณเก่งขึ้นแล้วนะ','ไหนลองมาทดสอบกันอีกรอบ คุณจะยอมรับการทดสอบมั้ย?','ไม่อะ','NO','รับการทดสอบ','scene38','scene38','scene39');
+newTile('39','Good.','ถ้าคุณกำลังอ่านข่าวแล้วเจอข่าวที่ไม่มีแหล่งที่มาที่น่าเชื่อถือคุณจะ...','ไม่แชร์ต่อ','ตรวจสอบแหล่งที่มา','เช็คความถูกต้องจากเว็ปอื่นๆ','scene40','scene40','scene40');
+newTile('40','Great','ถ้าคุณกำลังอ่านข่าวแล้วมีลิงค์ให้กดเข้าไปคุณควรที่จะ....','ไม่ควรกดเข้าไป','กดไปเลย','แค่ลองกดเข้าไปดูเฉยๆ','scene41','scene23','scene42');
+newTile('41','คุณเก่งขึ้นมากๆเลยนะเนี่ย','ชั่งซาบซึ้งยิ่งนักที่คุณเก่งขึ้น คุณจะนำเอาความรู้ที่คุณได้ไปแนะนำเพื่อนๆหรือคนรู้จักหรือไม่','แนะนำ','ไม่อะปล่อยให้ไปเจอเอง','ไปโดนเอาเองสิ','scene43','scene44','scene45');
+newTile('43','ยอดเยี่ยมมาก','คุณนี่เป็นคนดีจริงๆคุณคิดว่าการกระทำเหล่านี้เป็นสิ่งที่ผิดหรือไม่?','ผิดมากๆ','ผิดกฏหมาย','เป็นเรื่องที่เกิดขึ้นได้ทั่วไป','scene46','scene47','scene48');
+newTile('46','ใช่แล้วมันเป็นเรื่องที่ผิด','เราทุกคนต้องช่วยเหลือกันเพื่อไม่ให้คนใกล้ตัวโดนข่าวลวงหรือมิจฉาชีพมาหลอกใช่หรือไม่?','ไม่อะ','ไม่เห็นเกี่ยวกันเลย','ใช่','scene49','scene50','scene51');
+newTile('47','ใช่แล้วมันเป็นเรื่องที่ผิด','เราทุกคนต้องช่วยเหลือกันเพื่อไม่ให้คนใกล้ตัวโดนข่าวลวงหรือมิจฉาชีพมาหลอกใช่หรือไม่?','ไม่อะ','ไม่เห็นเกี่ยวกันเลย','ใช่','scene49','scene50','scene51');
+newTile('48','มันก็เกิดขึ้นเป็นปกตินั้นแหละ','แต่ยังไงเราทุกคนต้องช่วยเหลือกันเพื่อไม่ให้คนใกล้ตัวโดนข่าวลวงหรือมิจฉาชีพมาหลอกใช่หรือไม่?','ไม่อะ','ไม่เห็นเกี่ยวกันเลย','ใช่แล้ว','scene49','scene50','scene51');
+newTile('51','คุณมีไหวพริบและการณ์สังเกตที่เฉียบคม มีภูมิต้านทานในการรับสารที่ดีมากๆ','ยินดีด้วย','You','Won!','Congratulation!','scene52','scene52','scene52');
+}
+//failures
+  {
+  
+  fail('49','ขอถอนคำพูด','คุญชั่งซื่อบื่อเหลือเกิน','เริ่มเกมใหม่','ทางเลือกใหม่','ลองอีกครั้ง','scene1','scene1','scene43');
+  fail('38','ขอถอนคำพูด','คุญชั่งซื่อบื่อเหลือเกิน','ลองอีกครั้ง','เริ่มเกมใหม่','ลองอีกครั้ง','scene35','scene1','scene35');
+  fail('18','คุณโดนหลอก!','"เสียใจด้วย" คุณโดนหลอกเอาข้อมูลส่วนตัวไปเเล้ว','เริ่มเกมใหม่','ลองอีกครั้ง','เริ่มเกมใหม่','scene1','scene16','scene1')
+  fail('3','คุณโดนหลอก!','"เสียใจด้วย" คุณโดนหลอกเอาข้อมูลส่วนตัวไปเเล้ว 3วันถัดมาคุณเห็นโปรไฟล์ตัวเองตามเว็บผิดกดหมายหรือเว็บพนันมีคนโอนเงินเข้าบัญชีคุณจำนวนมาก.','ลองอีกครั้ง','ทางเลือกใหม่','เริ่มเกมใหม่','scene1','scene1','scene1');
+  fail('4','คุณโดนหลอก!','"เสียใจด้วย" คุณโดนหลอกเอาข้อมูลส่วนตัวไปเเล้ว 3วันถัดมาคุณเห็นโปรไฟล์ตัวเองตามเว็บผิดกดหมายหรือเว็บพนันมีคนโอนเงินเข้าบัญชีคุณจำนวนมาก.','ลองอีกครั้ง','ทางเลือกใหม่','เริ่มเกมใหม่','scene1','scene1','scene1');
+  fail('7','คุณโดนหลอก!','"เสียใจด้วย" คุณโดนหลอกเอาข้อมูลส่วนตัวไปเเล้ว 3วันถัดมาคุณเห็นโปรไฟล์ตัวเองตามเว็บผิดกดหมายหรือเว็บพนันมีคนโอนเงินเข้าบัญชีคุณจำนวนมาก.','ลองอีกครั้ง','ทางเลือกใหม่','เริ่มเกมใหม่','scene1','scene1','scene1');
+  fail('8','คุณโดนหลอก!','"เสียใจด้วย" คุณโดนหลอกเอาข้อมูลส่วนตัวไปเเล้ว 3วันถัดมาคุณเห็นโปรไฟล์ตัวเองตามเว็บผิดกดหมายหรือเว็บพนันมีคนโอนเงินเข้าบัญชีคุณจำนวนมาก.','เริ่มเกมใหม่','ทางเลือกใหม่','เริ่มเกมใหม่','scene1','scene6','scene1');
+  fail('15','แย่จริงๆ','ทำไมคุณไม่ตรวจสอบให้ดีก่อนที่จะส่งต่อให้ผู้อื่น','เริ่มเกมใหม่','ทางเลือกใหม่','เริ่มเกมใหม่','scene1','scene13','scene1');
+  fail('17','คุณโดนหลอก!','โธ่ๆหนูน้อยผู้น่าสงสารทำไมชั่งโง่เขลายิ่งนัก','เริ่มเกมใหม่','ทางเลือกใหม่','เริ่มเกมใหม่','scene1','scene13','scene1')
+  }
+//deaths
+{
+fail('50','ขอถอนคำพูด','คุญชั่งซื่อบื่อเหลือเกิน','เริ่มเกมใหม่','เริ่มเกมใหม่','ลองอีกครั้ง','scene1','scene1','scene43');
+fail('45','ทำไมคุณถึงทำแบบนั้นหละ','"เสียใจด้วย" คุณนี่นิสัยไม่ดีเลยควรไปปรับปรุงตัวนะ','เริ่มเกมใหม่','เริ่มเกมใหม่','ลองอีกครั้ง','scene1','scene1','scene41');
+fail('44','ทำไมคุณถึงทำแบบนั้นหละ','"เสียใจด้วย" คุณนี่นิสัยไม่ดีเลยควรไปปรับปรุงตัวนะ','เริ่มเกมใหม่','ทางเลือกใหม่','เริ่มเกมใหม่','scene1','scene1','scene41');
+fail('42','คุณโดนหลอก!','"เสียใจด้วย" คุณโดนหลอกเอาข้อมูลส่วนตัวไปเเล้ว 3วันถัดมาคุณเห็นโปรไฟล์ตัวเองตามเว็บผิดกดหมายหรือเว็บพนันมีคนโอนเงินเข้าบัญชีคุณจำนวนมาก.','เริ่มเกมใหม่','ทางเลือกใหม่','เริ่มเกมใหม่','scene1','scene40','scene1');
+fail('37','ขอถอนคำพูด','คุญชั่งซื่อบื่อเหลือเกิน','scene1','scene30','scene1');
+fail('36','ขอถอนคำพูด','คุญชั่งซื่อบื่อเหลือเกิน','เริ่มเกมใหม่','ทางเลือกใหม่','เริ่มเกมใหม่','scene1','scene34','scene1');
+fail('33','ขอถอนคำพูด','คุญชั่งซื่อบื่อเหลือเกิน','เริ่มเกมใหม่','เริ่มเกมใหม่','ลองอีกครั้ง','scene1','scene1','scene32');
+fail('31','คุณโดนหลอก!','"เสียใจด้วย" คุณโดนหลอกเอาข้อมูลส่วนตัวไปเเล้ว แต่คุณเลือกที่จะเอาเรื่องนี้ไปแจ้งความกับตำรวจเพื่อเอาเรื่องให้ถึงที่สุด','หาข้อมูลเพื่อสู้คดี','เก็บหลักฐาน','จะเอาเรื่องให้ถึงที่สุด','scene30','scene30','scene30');
+fail('29','ทำไมคุณถึงทำแบบนั้นหละ','"เสียใจด้วย" คุณนี่นิสัยไม่ดีเลยควรไปปรับปรุงตัวนะ','เริ่มเกมใหม่','ทางเลือกใหม่','เริ่มเกมใหม่','scene1','scene25','scene1');
+fail('28','ทำไมคุณถึงทำแบบนั้นหละ','"เสียใจด้วย" คุณนี่นิสัยไม่ดีเลยควรไปปรับปรุงตัวนะ','เริ่มเกมใหม่','ทางเลือกใหม่','เริ่มเกมใหม่','scene1','scene25','scene1');
+fail('26','คุณโดนหลอก!','"เสียใจด้วย" คุณโดนหลอกเอาข้อมูลส่วนตัวไปเเล้ว 3วันถัดมาคุณเห็นโปรไฟล์ตัวเองตามเว็บผิดกดหมายหรือเว็บพนันมีคนโอนเงินเข้าบัญชีคุณจำนวนมาก.','เริ่มเกมใหม่','เริ่มเกมใหม่','ลองอีกครั้ง','scene1','scene1','scene22')
+fail('24','คุณโดนหลอก!','"เสียใจด้วย" คุณโดนหลอกเอาข้อมูลส่วนตัวไปเเล้ว 3วันถัดมาคุณเห็นโปรไฟล์ตัวเองตามเว็บผิดกดหมายหรือเว็บพนันมีคนโอนเงินเข้าบัญชีคุณจำนวนมาก.','เริ่มเกมใหม่','ทางเลือกใหม่','เริ่มเกมใหม่','scene1','scene22','scene1')
+fail('23','คุณโดนหลอก!','"เสียใจด้วย" คุณโดนหลอกเอาข้อมูลส่วนตัวไปเเล้ว','เริ่มเกมใหม่','ทางเลือกใหม่','เริ่มเกมใหม่','scene1','scene20','scene1');
+fail('21','คุณโดนหลอก!','"เสียใจด้วย" คุณโดนหลอกเอาข้อมูลส่วนตัวไปเเล้ว','เริ่มเกมใหม่','เริ่มเกมใหม่','ลองอีกครั้ง','scene1','scene1','scene20');
+fail('19','ทำไมคุณถึงทำแบบนั้นหละ','คุณได้ทำสิ่งที่ผิดพลาดที่สุดไปแล้ว คุณไม่ควรกดลิงค์แปลกๆเด็ดขาด','เริ่มเกมใหม่','เริ่มเกมใหม่','เริ่มเกมใหม่','scene1','scene1','scene1');
+fail('5','คุณโดนหลอก!','คุณโดนหลอกเอาข้อมูลไปเรียบร้อย เเละมีคนปลอมบัญชีคุณจนคุณต้องอายัตบัญชีตัวเอง.','ลองอีกครั้ง','ลองเล่นอีกครั้ง','เริ่มใหม่','scene1','scene1','scene1');
+fail('10','คุณโดนหลอก!','"เสียใจด้วย" คุณโดนหลอกเอาข้อมูลส่วนตัวไปเเล้ว 3วันถัดมาคุณเห็นโปรไฟล์ตัวเองตามเว็บผิดกดหมายหรือเว็บพนันมีคนโอนเงินเข้าบัญชีคุณจำนวนมาก.','เริ่มเกมใหม่','เริ่มเกมใหม่','เริ่มเกมใหม่','scene1','scene1','scene1');
+fail('12','คุณโดนหลอก!','"เสียใจด้วย" คุณโดนหลอกเอาข้อมูลส่วนตัวไปเเล้ว 3วันถัดมาคุณเห็นโปรไฟล์ตัวเองตามเว็บผิดกดหมายหรือเว็บพนันมีคนโอนเงินเข้าบัญชีคุณจำนวนมาก.','เริ่มเกมใหม่','ทางเลือกใหม่','เริ่มเกมใหม่','scene1','scene9','scene1');
+fail('14','คุณโดนหลอก!','"เสียใจด้วย" คุณโดนหลอกเอาข้อมูลส่วนตัวไปเเล้ว 3วันถัดมาคุณเห็นโปรไฟล์ตัวเองตามเว็บผิดกดหมายหรือเว็บพนันมีคนโอนเงินเข้าบัญชีคุณจำนวนมาก.','เริ่มเกมใหม่','ทางเลือกใหม่','เริ่มเกมใหม่','scene1','scene13','scene1')
+}
+
+  </script>
+</body>
+</html>

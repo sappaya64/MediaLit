@@ -1,0 +1,510 @@
+<!doctype html>
+<html lang="th">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> 
+    <title>Document</title> 
+    <link rel="stylesheet" href="https://unpkg.com/bootstrap@4.5.0/dist/css/bootstrap.min.css" >
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" >
+    <style>
+     body {
+            background: #ffffff; /* สีพื้นหลัง */
+            font-family: Arial, sans-serif; /* เปลี่ยนแบบอักษร */
+        }
+
+        .container {
+            max-width: 800px; /* ปรับขนาดความกว้างของคอนเทนเนอร์ */
+            margin: auto; /* จัดตำแหน่งกึ่งกลาง */
+            padding: 20px; /* เพิ่มระยะห่างภายในคอนเทนเนอร์ */
+        }
+
+        .wrap-zone {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px; /* เพิ่มระยะห่างด้านล่าง */
+        }
+
+        .choice-zone,
+        .target-zone {
+            flex: 1; /* ปรับให้ขนาดเท่ากัน */
+            padding: 10px; /* เพิ่มระยะห่างภายใน */
+            background-color: #fff; /* สีพื้นหลัง */
+            border-radius: 10px; /* ทำให้มีมุมโค้ง */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* เพิ่มเงา */
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        li {
+            cursor: pointer;
+            margin-bottom: 100px; /* เพิ่มระยะห่างด้านล่างระหว่างรายการ */
+            padding: 95px; /* เพิ่มระยะห่างภายในรายการ */
+            background-color: #f1f1f1; /* สีพื้นหลังของรายการ */
+            border-radius: 15px; /* ทำให้มีมุมโค้ง */
+            transition: background-color 0.3s ease; /* เพิ่มเอฟเฟคการเปลี่ยนสีพื้นหลัง */
+        }
+
+        li:hover {
+            background-color: #e2e2e2; /* เปลี่ยนสีพื้นหลังของรายการเมื่อโฮเวอร์ */
+        }
+
+        .btn-group {
+            display: flex;
+            justify-content: center;
+        }
+
+        .btn-game {
+            margin: 0 10px; /* เพิ่มระยะห่างรอบขอบของปุ่ม */
+            padding: 10px 20px; /* เพิ่มระยะห่างภายในปุ่ม */
+            border: none;
+            border-radius: 20px; /* ทำให้มีมุมโค้ง */
+            background-color: #007bff; /* สีพื้นหลังของปุ่ม */
+            color: #fff; /* สีของตัวอักษร */
+            font-weight: bold; /* ทำให้ตัวอักษรหนาขึ้น */
+            cursor: pointer;
+            transition: background-color 0.3s ease; /* เพิ่มเอฟเฟคการเปลี่ยนสีพื้นหลัง */
+        }
+
+        .btn-game:hover {
+            background-color: #0056b3; /* เปลี่ยนสีพื้นหลังของปุ่มเมื่อโฮเวอร์ */
+        }
+        h1 {
+            color: #007bff; /* สีข้อความ */
+            text-align: center; /* จัดตำแหน่งข้อความตรงกลาง */
+            text-transform: uppercase; /* แปลงข้อความเป็นตัวพิมพ์ใหญ่ทั้งหมด */
+            font-weight: bold; /* ตัวหนา */
+            margin-bottom: 25px; /* ระยะห่างด้านล่าง */
+        }
+        .center-link {
+    text-align: center;
+    margin-top: 20px; /* เพิ่มระยะห่างด้านบนเพื่อให้ดูสวยงาม */
+  }
+    </style>
+</style>
+
+    </style>
+</head>
+<body>
+  
+<style>
+    div.wrap-zone{
+        display: flex;
+        width: 100%;
+        justify-content: stretch; 
+    }
+    ul.target-zone,ul.choice-zone{
+        list-style: none;
+        width: 50%;
+        padding: 50;
+        margin: 0;
+        display: flex;
+        flex-direction: column;        
+        margin-bottom: 10px;
+        justify-content: center;
+    }
+    ul.target-zone li,ul.choice-zone li{
+        display: flex;
+        min-width: 100%;
+        height: 100px;
+        width: auto;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+        margin-right: 10px;
+        cursor: pointer;
+        line-height: 50px;
+        transition: 0.5s ease;
+        margin-bottom: 2px;
+    }
+    ul.target-zone li{
+        background: #baedff;
+        border: solid 1px #bfff28;
+    }
+    ul.choice-zone li{
+        color: #6b0808;
+        border: solid 1px #d4cdcb; 
+    }
+    ul.target-zone li.selected,
+    ul.choice-zone li.selected{
+        border: solid 2px #ff5722;
+    }
+    ul.target-zone li.paired{
+        border: solid 2px #ff5722;
+        border-left: none !important;
+    }
+    ul.choice-zone li.paired{
+        border: solid 2px #ff5722;
+        border-right: none !important;
+    }    
+    ul.target-zone li.paired.failed,    
+    ul.choice-zone li.paired.failed{
+        background-color: #ff000073;
+        border: solid 2px #fd0c0c;
+    }    
+    ul.target-zone li.paired.passed,    
+    ul.choice-zone li.paired.passed{
+        background-color: #00ff0373;
+        border: solid 2px #0cfd0f;
+    }    
+    ul.choice-zone li:hover{
+        box-shadow: 0 0.25em 0.25em rgb(0 0 0 / 10%);
+    }
+    button.btn-game{
+        margin: auto;
+        display: flex;    
+        border-radius:6px;        
+        cursor:pointer;
+        font-weight:bold;
+        padding:6px 24px;
+        text-decoration:none;           
+        display: none;
+    }
+    button.btn-game:focus {
+        position:relative;
+        outline: none;
+        top:1px;
+    }    
+    #restart{
+        box-shadow:inset 0px 1px 0px 0px #f7c5c0;
+        background:linear-gradient(to bottom, #fc8d83 5%, #e4685d 100%);
+        background-color:#ff9800;
+        border:1px solid #ff5722;
+        text-shadow:0px 1px 0px #b23e35;
+        color:#ffffff;
+    }
+    #restart:hover{
+        background:linear-gradient(to bottom, #e4685d 5%, #fc8d83 100%);
+        background-color:#e4685d;
+    }
+    #nextstep{
+        box-shadow: inset 0px 1px 0px 0px #37a561;
+        background: linear-gradient(to bottom, #31c372 5%, #44d273 100%);
+        background-color: #8bc34a;
+        border: 1px solid #37d05d;
+        text-shadow: 0px 1px 0px #35b250;
+        color:#ffffff;
+    }
+    #nextstep:hover{
+        background: linear-gradient(to bottom, #1fe076 5%, #44d273 100%);
+        background-color:#5de47a;
+    }     
+    #replay{
+        box-shadow: inset 0px 1px 0px 0px #378fa5;
+        background: linear-gradient(to bottom, #31a6c3 5%, #44c9d2 100%);
+        background-color: #4a93c3;
+        border: 1px solid #3798d0;
+        text-shadow: 0px 1px 0px #3595b2;
+        color:#ffffff;
+    }
+    #replay:hover{
+        background: linear-gradient(to bottom, #31a6c3 5%, #44c9d2 100%);
+        background-color: #4a93c3;
+    }      
+    .choice-item{background: #f1d4a8;}
+    .move-to-1{
+        transform: translate(0,-100px); 
+    }     
+</style>
+
+
+<h1>เกมจับคู่เรียงให้ถูกต้อง</h1>
+<div class="center-link">
+    <a href="index.html">กลับหน้าหลัก</a>
+    <a href="game.html">เล่นเกมอื่น</a>
+  </div>
+
+
+
+
+<div class="container mt-5 mx-auto">
+    
+    
+ 
+<div class="wrap-zone">
+ 
+<!-- ส่วนสำหรับคำสุ่ม -->
+<ul class="choice-zone">
+</ul>  
+ 
+<!-- ส่วนสำหรับจัดเรียงเป็นประโยคใหม่ -->
+<ul class="target-zone">
+</ul>
+ 
+</div>    
+ 
+ 
+<hr>
+ 
+<!-- ส่วนของปุ่มจัดการ     -->
+<!-- ตำแหน่งสำหรับปุ่ม -->
+<div class="btn-group">
+    <button type="button" class="btn-game" id="restart">ลองใหม่</button>
+    <button type="button" class="btn-game" id="nextstep">ข้อต่อไป</button>
+    <button type="button" class="btn-game" id="replay">เล่นใหม่อีกครั้ง</button>
+</div>
+
+ 
+ 
+<script src="https://unpkg.com/jquery@3.3.1/dist/jquery.min.js"></script>
+<script type="text/javascript">
+jQuery(document).ready(function($) {
+ 
+    var selectSound = new Audio('https://www.ninenik.com/demo/sound/select-sound_2.wav');
+    var correctSound = new Audio('https://www.ninenik.com/demo/sound/correct-bell_2.wav');
+    var winSound = new Audio('https://www.ninenik.com/demo/sound/winning-sound_2.wav');    
+ 
+    // ฟังก์ชั่นสำหรับสุ่มคำสำหรับเลือก 
+    function shuffle(array) {
+        var currentIndex = array.length, temporaryValue, randomIndex;
+     
+        while (currentIndex !== 0) {
+            randomIndex = Math.floor(Math.random() * currentIndex);
+            currentIndex -= 1;
+            temporaryValue = array[currentIndex];
+            array[currentIndex] = array[randomIndex];
+            array[randomIndex] = temporaryValue;
+        }
+     
+        return array;
+    };
+ 
+    // ชุดตัวเลือกฟังซ้าย
+    var ansChoice = [
+    ["<img src='img/io3.png' width='350' height='180'>", "<img src='img/io2.png' width='350' height='180'>", "<img src='img/io1.png' width='350' height='180'>", "<img src='img/io4.png' width='350' height='180'>"],
+    ["<img src='img/oo1.png' width='350' height='180'>", "<img src='img/oo2.png' width='350' height='180'>", "<img src='img/oo3.png' width='350' height='180'>", "<img src='img/oo4.png' width='350' height='180'>"],
+     
+    ];
+    // ชุดตัวเลือกฝั่งขวา
+    var ansTarget = [
+        ("ข่าวปลอม ข่าวจริง ข่าวบิดเบือน ข่าวตัดต่อ").split(" "),
+        ["<img src='img/oo11.png' width='350' height='180'>", "<img src='img/oo22.png' width='350' height='180'>", "<img src='img/oo33.png' width='350' height='180'>", "<img src='img/oo44.png' width='350' height='180'>"],
+     
+    ];    
+ 
+ 
+    // ส่วนสำหรับกำหนด element ต่างๆ
+    var targetZone = $(".target-zone");
+    var choiceZone = $(".choice-zone");
+    var targetItem = $(".target-zone li");
+    var choiceItem = $(".choice-zone li");
+    var btnRestart = $("#restart"); 
+    var btnNextstep = $("#nextstep"); 
+    var btnReplay = $("#replay");
+ 
+    // นับลำดับข้อหรือรายการ
+    var step = 0;
+ 
+    // เก็บ key สำหรับสร้างตัวเลือก
+    var ansArrKey = [];
+    var keys = ansChoice[step].keys();
+    for (let x of keys) {
+        ansArrKey[x] = x;
+    }
+ 
+    // เริ่มต้นใช้ค่าแรกแถวแรกก่อน ท
+    var choiceVal = ansArrKey;    
+    var choice = {};
+    var target = {};
+    var paired = {};
+    var item = 0;
+    var currentItem = 0;
+  var animate = false;
+   function startGame(){
+        choice = {};  
+        target = {};  
+        paired = {}; 
+        item = 0; 
+        currentItem = 0; 
+ 
+        let ran_choiceVal = []; 
+       
+        targetZone.html("");
+        choiceZone.html("");
+ 
+        ran_choiceVal = $.extend([],choiceVal); 
+        shuffle(ran_choiceVal); 
+      
+        $.each(ran_choiceVal,function(i,v){
+            choiceZone.append('<li data-ans="'+v+'" class="choice-item">'+ansChoice[step][v]+'</li>');     
+        });
+        shuffle(ran_choiceVal); 
+        $.each(ran_choiceVal,function(i,v){
+            targetZone.prepend('<li data-ans="'+v+'" class="target-item">'+ansTarget[step][v]+'</li>');          
+        });        
+        btnRestart.hide();
+     
+    }
+ 
+    function restartGame(){
+        startGame();
+    }
+    
+    function nextstep(){
+        step++; // ไปข้อต่อไป
+        if(step==ansChoice.length){ // ทำครบทุกข้อแล้ว
+            btnReplay.css("display","flex");
+            step=-1;
+            targetZone.html("");
+            choiceZone.html("");            
+        }else{ // ยังไม่ครบ
+            ansArrKey = [];
+            keys = ansChoice[step].keys();
+            for (let x of keys) {
+                ansArrKey[x] = x;
+            }
+            
+            choiceVal = ansArrKey;      
+            startGame();
+        }
+    } 
+    
+    startGame();
+ 
+   
+    btnRestart.on("click",function(){
+        restartGame();
+    });
+    
+    btnNextstep.on("click",function(){
+        nextstep();
+    });    
+   
+    btnReplay.on("click",function(){
+        btnReplay.hide();
+        nextstep();
+    });     
+     
+    
+    
+    $(document.body).on("click",".choice-zone li:not(.paired)",function(){
+        if(animate){ // ถ้ายังยังมีการทำงานการเคลื่อนไหวอยู่ 
+            return false; // ยังไม่ต้องทำคำสั่งใดๆ หลังจากบรรทัดนี้
+        }
+        animate = true; // กำหนดสถานะการเคลื่อนไหวกำลังทำงาน
+        choice[item] = true;  // สถานะมีการเลือกรายการฝั่งซ้ายแล้ว
+        currentItem = (currentItem!=item)?item:currentItem; // อัพเดทให้เป็นค่าปัจจุบัน
+        if(target[item]){ // ฝั่งขวาตำแหน่งเดียวกันถูกเลือกแล้ว
+            choice[item] = true; // ฝั่งซ้ายถูกเลือกแล้ว
+            paired[item] = true; // จับคู่กันแล้ว
+            currentItem = item; // เก็บค่าลำดับที่ถูกเลือก
+            item++; // เพิ่มค่าลำดับที่ถูกเลือก
+        }
+ 
+        // เก็บค่าที่จะใช้กำหนดตำแหน่งที่จะเคลื่อนไหว คำนวณอ้างอิงความสูงของกล่อง
+        let n_order = ($(this).index()-currentItem)*100;
+        let new_li = $(this).clone(); // โคลนรายการที่เลือก
+        let old_li = $(this); // รายการที่เลือกตัวเดิม
+        // ทำการเคลื่อนไหว ไปยังตำแหน่งที่กำหนด
+        $(this).css({
+            transform: "translate(0,-"+n_order+"px)"
+        });     
+        // เมื่อเคลื่อนไปตำแหน่งตามช่วงเวลาที่กำหนดใน css แล้วก็ให้อัพเดทรายการ   
+        setTimeout(function(){
+            old_li.remove(); // ลบตัวเก่าที่เลือกออก
+            // เอา css class ชื่อ selected ของรายการที่ยังไม่จับคู่ออกทั้งหมด           
+            $(".choice-zone li:not(.paired)").removeClass("selected");
+            new_li.addClass("selected"); // ใส่ css class ชื่อ selected  ไป ตัวที่โคลน
+            if(currentItem==0){ // ถ้าเป็นตำแหน่งแรก
+                $(".choice-zone").prepend(new_li); // เพิ่มไปด้านหน้าสุด
+            }else{ // ถ้าเป็นตำแหน่งอื่นๆ
+                // เพิ่มต่อจากตัวที่เลือกล่าสุด
+                $(".choice-zone li.selected:eq("+(currentItem-1)+")").after(new_li);
+            }                          
+            if(paired[currentItem]){ // ถ้ามีการเลือกทั้งสองฝั่งแ้ว เพิ่ม css class ทั้งสองฝั่ง
+                $(".choice-zone li.selected:eq("+(currentItem)+")").addClass("paired");
+                $(".target-zone li.selected:eq("+(currentItem)+")").addClass("paired");
+            }           
+            if(paired[choiceVal.length-1]){// ถ้าเลือกจับคู่ครบทุกตัวแล้ว
+                checkans(); // ตรวจคำอบ
+            }    
+            animate = false; // กำหนดสถานะการเคลื่อนไหวหยุดทำงานแล้ว
+        },500);
+         
+ 
+    });    
+    // กำหนดการทำงานเมื่อเลือกตัวเลือกฝั่งขวา
+    $(document.body).on("click",".target-zone li:not(.paired)",function(){
+        if(animate){ // ถ้ายังยังมีการทำงานการเคลื่อนไหวอยู่ 
+            return false; // ยังไม่ต้องทำคำสั่งใดๆ หลังจากบรรทัดนี้
+        }
+        animate = true;  // กำหนดสถานะการเคลื่อนไหวกำลังทำงาน
+        target[item] = true; // สถานะมีการเลือกรายการฝั่งขวาแล้ว
+        currentItem = (currentItem!=item)?item:currentItem; // อัพเดทให้เป็นค่าปัจจุบัน
+        if(choice[item]){ // ฝั่งซ้ายตำแหน่งเดียวกันถูกเลือกแล้ว
+            target[item] = true; // ฝั่งขวาถูกเลือกแล้ว
+            paired[item] = true; // จับคู่กันแล้ว
+            currentItem = item; // เก็บค่าลำดับที่ถูกเลือก
+           item++; // เพิ่มค่าลำดับที่ถูกเลือก
+        }        
+ 
+        // เก็บค่าที่จะใช้กำหนดตำแหน่งที่จะเคลื่อนไหว คำนวณอ้างอิงความสูงของกล่อง
+        let n_order = ($(this).index()-currentItem)*100;
+        let new_li = $(this).clone(); // โคลนรายการที่เลือก
+        let old_li = $(this); // รายการที่เลือกตัวเดิม
+        // ทำการเคลื่อนไหว ไปยังตำแหน่งที่กำหนด
+        $(this).css({
+            transform: "translate(0,-"+n_order+"px)"
+        });
+        // เมื่อเคลื่อนไปตำแหน่งตามช่วงเวลาที่กำหนดใน css แล้วก็ให้อัพเดทรายการ           
+        setTimeout(function(){
+            old_li.remove(); // ลบตัวเก่าที่เลือกออก
+            // เอา css class ชื่อ selected ของรายการที่ยังไม่จับคู่ออกทั้งหมด         
+            $(".target-zone li:not(.paired)").removeClass("selected");
+            new_li.addClass("selected"); // ใส่ css class ชื่อ selected  ไป ตัวที่โคลน
+            if(currentItem==0){ // ถ้าเป็นตำแหน่งแรก
+                $(".target-zone").prepend(new_li); // เพิ่มไปด้านหน้าสุด
+            }else{ // ถ้าเป็นตำแหน่งอื่นๆ
+                // เพิ่มต่อจากตัวที่เลือกล่าสุด
+                $(".target-zone li.selected:eq("+(currentItem-1)+")").after(new_li);
+            } 
+            if(paired[currentItem]){// ถ้ามีการเลือกทั้งสองฝั่งแ้ว เพิ่ม css class ทั้งสองฝั่ง
+                $(".choice-zone li.selected:eq("+(currentItem)+")").addClass("paired");
+                $(".target-zone li.selected:eq("+(currentItem)+")").addClass("paired");             
+            }
+            if(paired[choiceVal.length-1]){// ถ้าเลือกจับคู่ครบทุกตัวแล้ว
+                checkans(); // ตรวจคำอบ
+            }       
+            animate = false; // กำหนดสถานะการเคลื่อนไหวหยุดทำงานแล้ว  
+        },500);
+         
+   });      
+    
+   // ตรวจคำตอบ
+   function checkans(){
+       
+        $(".choice-zone li,.target-zone li").css("transition","0s");
+      
+        $(".target-zone li").each(function(i,v){
+            let classCheck = "passed"; 
+           
+            if(!($(v).data("ans")==$(".choice-zone li:eq("+i+")").data("ans"))){
+                classCheck = "failed";  
+            }
+            // เพิ่มสถานะถูกผิด ทั้งฝั่งซ้ายและฝั่งขวา
+            $(v).addClass(classCheck);
+            $(".choice-zone li:eq("+i+")").addClass(classCheck);
+        });
+        setTimeout(function(){
+            // ยังจับคู่ไม่ถูก ก็เริ่มเกมใหม่
+            if($("li").hasClass("failed")){
+                restartGame();
+            }else{ // จับคู่และผ่านข้อนี้แล้ว
+                nextstep(); // ทำข้อต่อไป
+            }
+        },1500);
+   }
+ 
+});
+</script>
+<script>
+$(function(){
+ 
+     
+});
+</script>
+</body>
+</html>
