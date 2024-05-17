@@ -66,18 +66,18 @@ h2 {
 }
 
 .face1 {
-    top: 20px;
-    left: 20px;
+    top: -110px;
+    left: -50px;
 }
 
 .face2 {
-    top: 20px;
-    right: 20px;
+    top: -100px;
+    right: 500px;
 }
 
 .face3 {
-    bottom: 20px;
-    left: 20px;
+    bottom: -110px;
+    left: -50px;
 }
 
 .face4 {
@@ -86,7 +86,7 @@ h2 {
 }
 
 .face img {
-    width: 100%;
+    width: 310%;
     border-radius: 50%;
     /* Remove box-shadow */
 }
